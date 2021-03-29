@@ -13,3 +13,12 @@ Resources:
         - Key: Name
           Value: !Sub backend-${ID}
     
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      KeyName: CentOS2
+      ImageId: ami-0ddc70e50205f89b6
+      Tags:
+        - Key: Name
+          Value: !Sub backend-${ID}
