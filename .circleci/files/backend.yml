@@ -8,7 +8,7 @@ Resources:
     Properties:
       InstanceType: t2.micro
       KeyName: CentOS
-      ImageId: ami-06e54d05255faf8f6
+      ImageId: ami-0ddc70e50205f89b6
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
