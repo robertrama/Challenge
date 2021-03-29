@@ -7,10 +7,6 @@ jobs:
         steps:
           - checkout
           - run:
-              name: install awscli
-              command: |
-                pip install awscli
-          - run:
               name: deploy infrastructure
               command: |
                 aws cloudformation deploy \
