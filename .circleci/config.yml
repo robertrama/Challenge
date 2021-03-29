@@ -11,8 +11,7 @@ jobs:
               command: |
                 aws cloudformation deploy \
                   --template-file .circleci/files/backend.yml \
-                  --stack-name "challenge" \
-                  --region=us-west-2
+                  --stack-name "challenge" 
 
 workflows:
   default:
