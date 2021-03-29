@@ -1,0 +1,15 @@
+Parameters:
+    ID:
+      Type: String
+
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      KeyName: CentOS
+      ImageId: ami-06e54d05255faf8f6
+      Tags:
+        - Key: Name
+          Value: !Sub backend-${ID}
+    

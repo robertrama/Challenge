@@ -1,0 +1,17 @@
+jobs:
+    deploy-infrastructure:
+        docker:
+          - image: amazon/aws-cli
+        steps:
+          - checkout
+          - run:
+              name: deploy infrastructure
+              command: |
+                aws cloudformation deploy \
+                  --template-file .circleci/files/backend.yml \
+                  --stack-name "challenge" 
+
+workflows:
+  default:
+    jobs:
+        - deploy-infrastructure
