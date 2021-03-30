@@ -13,7 +13,8 @@ jobs:
                   --template-file .circleci/files/backend.yml \
                   --tags project=Challenge \
                   --stack-name "challenge-stack-${CIRCLE_WORKFLOW_ID:0:7}" \
-                  --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"
+                  --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}" \
+                  --region=us-west-2
 
 workflows:
   default:
