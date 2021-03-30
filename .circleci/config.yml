@@ -12,8 +12,7 @@ jobs:
               aws cloudformation deploy \
                 --template-file .circleci/files/backend.yml \
                 --tags project=Challenge \
-                --stack-name "challenge-stack" \
-                --region=us-west-2
+                --stack-name "challenge-stack" 
 
 
 
