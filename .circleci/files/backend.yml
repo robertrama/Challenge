@@ -9,6 +9,7 @@ Resources:
       InstanceType: t2.micro
       KeyName: CentOS
       ImageId: ami-0ddc70e50205f89b6
+      VolumeSize: "40"
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
@@ -19,8 +20,8 @@ Resources:
       InstanceType: t2.micro
       KeyName: CentOS2
       ImageId: ami-0ddc70e50205f89b6
+      VolumeSize: "40"
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
-##
   
