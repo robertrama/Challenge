@@ -14,14 +14,6 @@ jobs:
                 --tags project=Challenge \
                 --stack-name "stack-${CIRCLE_WORKFLOW_ID:0:7}" \
                 --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"
-        - run: 
-            name: depoy infrastructure
-            command: |
-              aws cloudformation deploy \
-                --template-file .circleci/files/frontend.yml \
-                --tags project=Challenge \
-                --stack-name "stack-${CIRCLE_WORKFLOW_ID:0:7}" \
-                --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"
 
 
 workflows:
